@@ -1,0 +1,132 @@
+/* BODY va CONTAINER */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #d0f0f8, #f0f2f5);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;          /* bu qator qo'shildi */
+}
+
+/* INPUT */
+input {
+    width: 90%;
+    padding: 14px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 10px rgba(0,123,255,0.3);
+}
+
+/* BUTTON */
+button {
+    width: 90%;
+    padding: 14px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* RESULT CARD */
+.result-card {
+    background-color: white;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    padding: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.result-card img {
+    width: 180px;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.result-card h2 {
+    font-size: 26px;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.result-card p {
+    font-size: 18px;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* ANIMATSIYA */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* RESPONSIVE: TELEFON */
+@media (max-width: 480px) {
+    input {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 12px 0;
+    }
+
+    .result-card h2 {
+        font-size: 22px;
+    }
+
+    .result-card p {
+        font-size: 16px;
+    }
+
+    .result-card img {
+        width: 150px;
+    }
+}
+
+/* Asoschi (pastga tushirish uchun) */
+.asoschi {
+    margin-top: auto;           /* eng to'g'ri va moslashuvchan usul */
+    padding-top: 40px;          /* ixtiyoriy, biroz yuqoridan bo'sh joy */
+    padding-bottom: 30px;       /* telefonlarda pastdan chiqib ketmasligi uchun */
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}

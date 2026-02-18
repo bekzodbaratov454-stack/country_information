@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davlat Qidiruv</title>
+    <link rel="stylesheet" href="uygavazifa.css">
+</head>
+<body>
+
+<div class="container">
+    <!-- Natija tepada chiqadi -->
+    <div id="result"></div>
+
+    <!-- Input va button -->
+    <input type="text" id="countryInput" placeholder="Davlat nomini yozing">
+    <button onclick="getCountry()">Qidirish</button>
+
+    
+<div class="asoschi">
+    <h1>Founder: Bekzod Baratov ©</h1>
+</div>
+
+</div>
+
+
+<script src="uygavazifa.js"></script>
+<script>
+
+
+    // Enter bosilganda ham ishlashi
+    const input = document.getElementById("countryInput");
+    input.addEventListener("keydown", (e) => {
+        if(e.key === "Enter") getCountry();
+    });
+</script>
+</body>
+</html>
