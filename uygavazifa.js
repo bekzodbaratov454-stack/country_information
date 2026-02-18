@@ -24,14 +24,18 @@ function getCountry() {
                 currenssy = `${current.name} (${current.symbol || ""})`;
              }
 
-            result.innerHTML = `
-                <h2>${country.name.common}</h2>"Ma'lumot yo'q"}</p>
-                <p><b>Aholi:</b> ${country.population.toLocaleString()}</p>
-                <p><b>Hudud:</b> ${country.region}</p>
-                <p><b>Valyutasi:</b> ${currenssy}</p>
-                <p><b>Tillar:</b> ${country.languages ? Object.values(country.languages).join(", ") : "Ma'lumot yo'q"}</p>
+             result.innerHTML = `
+    <h2>${country.name.common}</h2>
+    <img src="${flag}" width="150" alt="Flag of ${country.name.common}">
+    <p><b>Poytaxt:</b> ${country.capital?.[0] || "Ma'lumot yo'q"}</p>
+    <p><b>Aholi:</b> ${country.population.toLocaleString()}</p>
+    <p><b>Hudud:</b> ${country.region}</p>
+    <p><b>Valyutasi:</b> ${currenssy}</p>
+    <p><b>Tillar:</b> ${country.languages ? Object.values(country.languages).join(", ") : "Ma'lumot yo'q"}</p>
+`;
 
-            `;
+
+
         })
         .catch((err) => {
             result.innerHTML = `<p style="color:red">${err.message}</p>`;
@@ -88,7 +92,3 @@ input.addEventListener("keydown", (e) => {
 //     })
 //     .catch((err) => {
 //         result.innerHTML = `<p style="color:red">${err.message}</p>`;
-//     });
-//                 <img src="${flag}" width="150">
-//                 <p><b>Poytaxt:</b> ${country.capital?.[0] || 
-// // }
